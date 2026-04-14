@@ -8,7 +8,12 @@
       "WebFetch(domain:www.dropbox.com)",
       "WebFetch(domain:www.carregistration.com)",
       "Bash(grep -l 'bg-\\\\[#001F29\\\\]/78' *.html)",
-      "Bash(grep -rl \"57tvv0slg705nsd5wjflj\" *.html)"
+      "Bash(grep -rl \"57tvv0slg705nsd5wjflj\" *.html)",
+      "Bash(sed -i '' 's|from-\\\\[#001F29\\\\]/95 via-\\\\[#001F29\\\\]/85 to-\\\\[#001F29\\\\]/70|from-[#001F29]/82 via-[#001F29]/62 to-[#001F29]/40|g' registration.html sticker.html boat-ohv.html parking-tickets.html contact.html)",
+      "Bash(sed -i '' 's|from-\\\\[#001F29\\\\] via-\\\\[#001F29\\\\]/92 to-\\\\[#001F29\\\\]/85|from-[#001F29]/88 via-[#001F29]/70 to-[#001F29]/52|g' title-transfer.html flsp.html suspended-registration.html traffic-school.html fleet.html)",
+      "Bash(sed -i '' 's|photo-1504711434969-e33886168f5c|photo-1557223562-6c77ef16210f|g' traffic-school.html)",
+      "Bash(sed -i '' 's|photo-1544551763-46a013bb70d5|photo-1567899378494-47b22a2ae96a|g' boat-ohv.html)",
+      "Bash(sed -i '' 's|photo-1556745753-b2904692b3cd|photo-1573171673843-3efbe8e78b9b|g' parking-tickets.html)"
     ]
   }
 }
