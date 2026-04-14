@@ -6,7 +6,8 @@
       "WebFetch(domain:images.pexels.com)",
       "WebFetch(domain:dl.dropboxusercontent.com)",
       "WebFetch(domain:www.dropbox.com)",
-      "WebFetch(domain:www.carregistration.com)"
+      "WebFetch(domain:www.carregistration.com)",
+      "Bash(grep -l 'bg-\\\\[#001F29\\\\]/78' *.html)"
     ]
   }
 }
