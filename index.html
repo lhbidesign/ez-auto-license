@@ -143,13 +143,6 @@
     const dd = document.getElementById('more-dropdown');
     if (dd && !dd.contains(e.target)) document.getElementById('more-menu').classList.add('hidden');
   });
-  // Hero quick-start: update CTA href on service selection
-  document.addEventListener('change', function(e) {
-    if (e.target && e.target.name === 'service') {
-      var cta = document.getElementById('hero-cta');
-      if (cta) cta.href = e.target.value;
-    }
-  });
 </script>
 
 <main id="main-content">
@@ -174,52 +167,15 @@
         </div>
         <h1 class="text-6xl md:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">Done waiting<br>at the DMV?</h1>
         <p class="text-xl text-slate-300 mb-10 leading-relaxed max-w-lg font-medium">A California family business serving drivers for over 40 years. Renew your registration, transfer a title, or replace lost stickers. All online, in minutes, without ever visiting a field office.</p>
-        <!-- Quick-Start Form -->
-        <div class="bg-[#001F29]/80 backdrop-blur-xl p-6 rounded-2xl border border-white/15 shadow-2xl w-full max-w-2xl">
-          <!-- Input fields: 2-column grid -->
-          <div class="grid grid-cols-2 gap-3 mb-4">
-            <div>
-              <label for="f-plate" class="block text-[10px] font-bold text-amber-400 uppercase tracking-widest mb-1.5">License Plate No.</label>
-              <input id="f-plate" type="text" placeholder="e.g. 7ABC123" autocomplete="off" class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"/>
-            </div>
-            <div>
-              <label for="f-vin" class="block text-[10px] font-bold text-amber-400 uppercase tracking-widest mb-1.5">Last 5 of VIN</label>
-              <input id="f-vin" type="text" placeholder="e.g. AB123" maxlength="5" autocomplete="off" class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"/>
-            </div>
-            <div>
-              <label for="f-zip" class="block text-[10px] font-bold text-amber-400 uppercase tracking-widest mb-1.5">Zip Code</label>
-              <input id="f-zip" type="text" placeholder="e.g. 92703" maxlength="5" autocomplete="postal-code" class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"/>
-            </div>
-            <div>
-              <label for="f-email" class="block text-[10px] font-bold text-amber-400 uppercase tracking-widest mb-1.5">Email Address</label>
-              <input id="f-email" type="email" placeholder="you@email.com" autocomplete="email" class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"/>
-            </div>
+        <div class="bg-white/5 backdrop-blur-2xl p-2 rounded-xl border border-white/10 flex flex-col md:flex-row gap-4 max-w-xl shadow-2xl">
+          <div class="flex-1 relative">
+            <label for="plate-search" class="sr-only">California License Plate or VIN</label>
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-amber-400" aria-hidden="true">license</span>
+            <input id="plate-search" class="w-full pl-12 pr-4 py-4 bg-white/5 border-none rounded-lg text-white placeholder-slate-400 focus:ring-2 focus:ring-amber-400 outline-none transition-all" placeholder="Enter CA plate or VIN to get started" type="text" autocomplete="off" aria-describedby="plate-hint"/>
           </div>
-          <!-- Radio options: 2-column grid -->
-          <div class="grid grid-cols-2 gap-2 mb-4" role="radiogroup" aria-label="Select a service">
-            <label class="flex items-center gap-2.5 p-3 rounded-lg border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
-              <input type="radio" name="service" value="registration.html" class="sr-only" checked/>
-              <span class="w-3.5 h-3.5 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all"></span>
-              <span class="text-slate-300 text-xs font-semibold group-has-[:checked]:text-white transition-colors leading-tight">Renew Vehicle Registration</span>
-            </label>
-            <label class="flex items-center gap-2.5 p-3 rounded-lg border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
-              <input type="radio" name="service" value="sticker.html" class="sr-only"/>
-              <span class="w-3.5 h-3.5 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all"></span>
-              <span class="text-slate-300 text-xs font-semibold group-has-[:checked]:text-white transition-colors leading-tight">Replace Lost Sticker / Reg. Card</span>
-            </label>
-            <label class="flex items-center gap-2.5 p-3 rounded-lg border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
-              <input type="radio" name="service" value="title-transfer.html" class="sr-only"/>
-              <span class="w-3.5 h-3.5 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all"></span>
-              <span class="text-slate-300 text-xs font-semibold group-has-[:checked]:text-white transition-colors leading-tight">Transfer Vehicle Title</span>
-            </label>
-            <label class="flex items-center gap-2.5 p-3 rounded-lg border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
-              <input type="radio" name="service" value="suspended-registration.html" class="sr-only"/>
-              <span class="w-3.5 h-3.5 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all"></span>
-              <span class="text-slate-300 text-xs font-semibold group-has-[:checked]:text-white transition-colors leading-tight">Clear Suspended Registration</span>
-            </label>
-          </div>
-          <a id="hero-cta" href="registration.html" class="flex items-center justify-center gap-2 w-full bg-amber-400 text-[#001F29] font-extrabold py-3.5 rounded-xl hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 text-sm uppercase tracking-widest">Get Started <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span></a>
+          <button class="bg-amber-400 text-[#001F29] font-bold px-8 py-4 rounded-lg hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20">Look Up My Vehicle</button>
         </div>
+        <p id="plate-hint" class="text-slate-500 text-xs mt-3 ml-1">No account needed &middot; Results in under 2 minutes &middot; 256-bit encrypted</p>
       </div>
     </div>
   </section>
