@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:images.unsplash.com)",
+      "WebFetch(domain:www.yelp.com)",
+      "WebFetch(domain:images.pexels.com)",
+      "WebFetch(domain:dl.dropboxusercontent.com)",
+      "WebFetch(domain:www.dropbox.com)",
+      "WebFetch(domain:www.carregistration.com)"
+    ]
+  }
+}
