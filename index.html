@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EZ Auto License | Official California DMV Partner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#f9f9f9",
+          "error-container": "#ffdad6",
+          "surface-container-highest": "#e2e2e2",
+          "surface-container-high": "#e8e8e8",
+          "on-error-container": "#93000a",
+          "tertiary-container": "#00544a",
+          "surface-bright": "#f9f9f9",
+          "on-background": "#1a1c1c",
+          "inverse-on-surface": "#f1f1f1",
+          "primary": "#001F29",
+          "on-secondary-fixed-variant": "#524700",
+          "surface-tint": "#001F29",
+          "primary-fixed": "#c0e8ff",
+          "secondary": "#FFB800",
+          "on-secondary-fixed": "#211b00",
+          "on-primary": "#ffffff",
+          "tertiary": "#003b34",
+          "surface-container-low": "#f4f3f3",
+          "outline": "#71787d",
+          "error": "#ba1a1a",
+          "inverse-primary": "#9dcde7",
+          "secondary-fixed": "#ffe33b",
+          "inverse-surface": "#2f3131",
+          "on-tertiary-fixed-variant": "#005047",
+          "secondary-container": "#FFB800",
+          "on-secondary-container": "#001F29",
+          "on-tertiary-fixed": "#00201c",
+          "on-secondary": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "on-error": "#ffffff",
+          "on-surface-variant": "#41484c",
+          "primary-fixed-dim": "#9dcde7",
+          "primary-container": "#003241",
+          "surface-variant": "#e2e2e2",
+          "on-primary-fixed": "#001e2b",
+          "secondary-fixed-dim": "#e2c600",
+          "tertiary-fixed-dim": "#59dbc7",
+          "surface-dim": "#dadada",
+          "surface-container": "#eeeeee",
+          "on-tertiary": "#ffffff",
+          "on-primary-container": "#90c0d9",
+          "on-primary-fixed-variant": "#174c62",
+          "outline-variant": "#c1c7cd",
+          "on-surface": "#1a1c1c",
+          "tertiary-fixed": "#79f7e3",
+          "on-tertiary-container": "#4acdba",
+          "background": "#f9f9f9"
+        },
+        "borderRadius": {
+          "DEFAULT": "4px",
+          "lg": "8px",
+          "xl": "12px",
+          "full": "9999px"
+        },
+        "fontFamily": {
+          "headline": ["Manrope"],
+          "body": ["Inter"],
+          "label": ["Inter"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+
+<!-- Skip to main content (accessibility) -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-amber-400 focus:text-[#001F29] focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold focus:text-sm">Skip to main content</a>
+
+<!-- Top Navigation -->
+<header class="bg-[#001F29] top-0 sticky z-50 shadow-xl shadow-slate-950/20">
+  <nav aria-label="Main navigation" class="flex justify-between items-center w-full px-8 py-4 max-w-full mx-auto">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3 group flex-shrink-0">
+      <!-- Icon: amber badge with lightning bolt -->
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+        <rect width="40" height="40" rx="10" fill="#FFB800"/>
+        <!-- Lightning bolt -->
+        <path d="M23 5L10 22H19.5L17 35L31 17H21L23 5Z" fill="#001F29"/>
+        <!-- Speed motion lines -->
+        <rect x="5" y="17" width="4" height="2" rx="1" fill="#001F29" opacity="0.35"/>
+        <rect x="4" y="21" width="3" height="2" rx="1" fill="#001F29" opacity="0.25"/>
+      </svg>
+      <!-- Wordmark -->
+      <div class="leading-none flex flex-col gap-0.5">
+        <div class="font-['Manrope'] font-black italic tracking-tight leading-none text-[22px]">
+          <span class="text-[#FFB800]">EZ</span><span class="text-white"> AUTO</span>
+        </div>
+        <div class="text-slate-400 font-['Manrope'] font-semibold text-[10px] tracking-[0.28em] uppercase">LICENSE</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center space-x-2 font-['Manrope'] font-semibold tracking-tight text-sm">
+      <a class="bg-amber-400 text-[#001F29] rounded-full px-4 py-1.5 transition-all duration-300 font-bold" href="#services" aria-current="page">Registration</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="#services">Title</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="#how-it-works">How It Works</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="#fleet">Fleet</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="#omv">OMV</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="#contact">Contact</a>
+    </div>
+    <div class="flex items-center space-x-6">
+      <button class="text-slate-300 hover:text-white transition-colors flex items-center gap-1 text-sm">
+        <span class="material-symbols-outlined text-lg">language</span>
+        EN/ES
+      </button>
+      <button class="bg-amber-400 text-[#001F29] px-6 py-2.5 rounded-full font-bold scale-95 active:scale-90 transition-transform shadow-lg shadow-amber-400/20">Quick Renewal</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img alt="Everyday sedan driving on an open road" class="w-full h-full object-cover object-right" src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=2000&q=90"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#001F29]/95 via-[#001F29]/60 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+      <div class="max-w-2xl text-white">
+        <div class="flex flex-wrap items-center gap-3 mb-8">
+          <span class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-amber-400/20 border border-amber-400/30 text-amber-400 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">verified</span>
+            Official CA DMV Partner
+          </span>
+          <span class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-slate-300 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">favorite</span>
+            Family-Owned &middot; Est. 1984
+          </span>
+        </div>
+        <h1 class="text-6xl md:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">Done waiting<br>at the DMV?</h1>
+        <p class="text-xl text-slate-300 mb-10 leading-relaxed max-w-lg font-medium">A California family business serving drivers for over 40 years. Renew your registration, transfer a title, or replace lost stickers. All online, in minutes, without ever visiting a field office.</p>
+        <div class="bg-white/5 backdrop-blur-2xl p-2 rounded-xl border border-white/10 flex flex-col md:flex-row gap-4 max-w-xl shadow-2xl">
+          <div class="flex-1 relative">
+            <label for="plate-search" class="sr-only">California License Plate or VIN</label>
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-amber-400" aria-hidden="true">license</span>
+            <input id="plate-search" class="w-full pl-12 pr-4 py-4 bg-white/5 border-none rounded-lg text-white placeholder-slate-400 focus:ring-2 focus:ring-amber-400 outline-none transition-all" placeholder="Enter CA plate or VIN to get started" type="text" autocomplete="off" aria-describedby="plate-hint"/>
+          </div>
+          <button class="bg-amber-400 text-[#001F29] font-bold px-8 py-4 rounded-lg hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20">Look Up My Vehicle</button>
+        </div>
+        <p id="plate-hint" class="text-slate-500 text-xs mt-3 ml-1">No account needed &middot; Results in under 2 minutes &middot; 256-bit encrypted</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted Partners Bar -->
+  <section class="bg-white py-12 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-8 flex flex-wrap justify-between items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700 gap-8">
+      <div class="text-xs font-extrabold text-primary tracking-[0.3em] uppercase">Trusted By California Authorities</div>
+      <div class="flex flex-wrap items-center gap-12">
+        <div class="flex items-center gap-2 font-black text-xl text-primary">CA DMV<span class="text-amber-500">AUTHORIZED</span></div>
+        <div class="flex items-center gap-2 font-bold text-lg text-primary"><span class="material-symbols-outlined">verified_user</span>SECURE PAY</div>
+        <div class="flex items-center gap-2 font-bold text-lg text-primary"><span class="material-symbols-outlined">shield</span>DOT COMPLIANT</div>
+        <div class="flex items-center gap-2 font-black text-xl text-primary italic">NADA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────
+       HOW IT WORKS
+       ───────────────────────────────────────────── -->
+  <section id="how-it-works" class="py-28 bg-[#001F29] relative overflow-hidden">
+    <!-- Ambient glow -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+
+      <!-- Section header -->
+      <div class="text-center mb-20">
+        <span class="inline-block py-1.5 px-4 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-[10px] font-bold uppercase tracking-[0.22em] mb-6">Simple Process</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-5 tracking-tight">Your registration,<br class="hidden md:block"/> done in 3 steps</h2>
+        <p class="text-slate-400 text-lg max-w-lg mx-auto leading-relaxed">No office visit. No 4-hour wait. Just enter your plate, we verify with CA DMV, you pay, and you're done.</p>
+      </div>
+
+      <!-- Steps grid -->
+      <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+
+        <!-- Connector segment 1: right edge of circle 1 → left edge of circle 2 -->
+        <div class="hidden md:block absolute h-px z-0" style="top: 56px; left: calc(100% / 6 + 56px); right: calc(50% + 56px);" aria-hidden="true">
+          <div class="h-full bg-gradient-to-r from-amber-400/80 to-amber-400/40"></div>
+        </div>
+        <!-- Connector segment 2: right edge of circle 2 → left edge of circle 3 -->
+        <div class="hidden md:block absolute h-px z-0" style="top: 56px; left: calc(50% + 56px); right: calc(100% / 6 + 56px);" aria-hidden="true">
+          <div class="h-full bg-gradient-to-r from-amber-400/40 to-amber-400/80"></div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center text-center group px-4">
+          <!-- Icon circle -->
+          <div class="relative mb-8 flex-shrink-0 z-10">
+            <div class="w-28 h-28 rounded-full bg-amber-400 flex items-center justify-center shadow-2xl shadow-amber-400/25 group-hover:shadow-amber-400/40 transition-shadow duration-300">
+              <span class="material-symbols-outlined text-[#001F29] text-5xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1, 'wght' 500;">license</span>
+            </div>
+            <div class="absolute -top-1.5 -right-1.5 w-8 h-8 bg-[#001F29] border-2 border-amber-400 rounded-full flex items-center justify-center text-amber-400 font-black text-sm">1</div>
+          </div>
+          <h3 class="text-white font-extrabold text-xl mb-3 tracking-tight">Enter Your Plate or VIN</h3>
+          <p class="text-slate-400 leading-relaxed text-sm max-w-xs">Type your California plate number or 17-character VIN. We instantly pull your vehicle record from the state database.</p>
+          <div class="mt-5 inline-flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider">
+            <span class="material-symbols-outlined text-base" aria-hidden="true">timer</span> Takes ~30 seconds
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center text-center group px-4">
+          <div class="relative mb-8 flex-shrink-0 z-10">
+            <div class="w-28 h-28 rounded-full bg-white/8 border border-white/15 flex items-center justify-center group-hover:bg-amber-400/10 group-hover:border-amber-400/30 transition-all duration-300">
+              <span class="material-symbols-outlined text-slate-300 text-5xl group-hover:text-amber-400 transition-colors duration-300" aria-hidden="true" style="font-variation-settings: 'FILL' 1, 'wght' 400;">verified_user</span>
+            </div>
+            <div class="absolute -top-1.5 -right-1.5 w-8 h-8 bg-[#001F29] border-2 border-white/25 rounded-full flex items-center justify-center text-slate-400 font-black text-sm group-hover:border-amber-400/60 group-hover:text-amber-400 transition-all duration-300">2</div>
+          </div>
+          <h3 class="text-white font-extrabold text-xl mb-3 tracking-tight">We Verify with CA DMV</h3>
+          <p class="text-slate-400 leading-relaxed text-sm max-w-xs">Our system runs a live check against the California DMV, confirming smog, insurance status, and any outstanding fees automatically.</p>
+          <div class="mt-5 inline-flex items-center gap-1.5 text-slate-500 text-xs font-bold uppercase tracking-wider">
+            <span class="material-symbols-outlined text-base" aria-hidden="true">bolt</span> Instant check
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex flex-col items-center text-center group px-4">
+          <div class="relative mb-8 flex-shrink-0 z-10">
+            <div class="w-28 h-28 rounded-full bg-white/8 border border-white/15 flex items-center justify-center group-hover:bg-amber-400/10 group-hover:border-amber-400/30 transition-all duration-300">
+              <span class="material-symbols-outlined text-slate-300 text-5xl group-hover:text-amber-400 transition-colors duration-300" aria-hidden="true" style="font-variation-settings: 'FILL' 1, 'wght' 400;">task_alt</span>
+            </div>
+            <div class="absolute -top-1.5 -right-1.5 w-8 h-8 bg-[#001F29] border-2 border-white/25 rounded-full flex items-center justify-center text-slate-400 font-black text-sm group-hover:border-amber-400/60 group-hover:text-amber-400 transition-all duration-300">3</div>
+          </div>
+          <h3 class="text-white font-extrabold text-xl mb-3 tracking-tight">Pay &amp; You're Done</h3>
+          <p class="text-slate-400 leading-relaxed text-sm max-w-xs">Securely pay state fees online. Get your digital e-sticker and email confirmation instantly. Physical tags arrive in 3–5 business days.</p>
+          <div class="mt-5 inline-flex items-center gap-1.5 text-slate-500 text-xs font-bold uppercase tracking-wider">
+            <span class="material-symbols-outlined text-base" aria-hidden="true">encrypted</span> Bank-grade secure
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom CTA row -->
+      <div class="text-center mt-16 flex flex-col items-center gap-4">
+        <a href="#plate-search" class="inline-block bg-amber-400 text-[#001F29] font-extrabold px-10 py-4 rounded-full text-base shadow-xl shadow-amber-400/20 hover:bg-amber-300 active:scale-95 transition-all">
+          Start My Renewal Now
+        </a>
+        <p class="text-slate-600 text-sm">Trusted by 100,000+ California drivers &middot; Open 24/7</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview (Bento Grid) -->
+  <section id="services" class="py-24 max-w-7xl mx-auto px-8">
+    <div class="mb-16">
+      <h2 class="text-4xl font-extrabold text-primary mb-4 tracking-tight">Everything You Need, In One Place</h2>
+      <div class="h-1 w-20 bg-amber-400 rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Large Featured Card - Registration -->
+      <div class="md:col-span-2 relative h-[400px] rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-500">
+        <img alt="Car driving through Yosemite National Park" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzI4AC8oCxsmINV76M96ozxjQYpcPhldp-WYBSHsc0Gg4F8NMDQs9_3-KFvKdyshsjvrsGDZeHjWFttu132_WnIaLKwoQvvRWXT5M0R6nvKZkRcIZoVpnJeyXoitUMN1veir3EdI1hTvWMQKAA7kFoSy1LB5TTwpUnUNdJw6AmcbuIanddGQVp0c8Q5KOSSaZlmgkO8itIUXlM1b_HRw23LhnHaW9eK7TSUD-C_Q0FpH_t0YHS-HN2PmxKoit8CElyBRLM-hF3mgkp"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#001F29] via-[#001F29]/60 to-transparent"></div>
+        <div class="relative h-full p-10 flex flex-col justify-end text-white">
+          <div class="w-12 h-12 bg-amber-400 text-[#001F29] rounded-lg flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-2xl font-bold">autorenew</span>
+          </div>
+          <h3 class="text-3xl font-extrabold mb-4">Registration Renewals</h3>
+          <p class="text-slate-200 mb-8 text-lg max-w-md">Instant California stickers and e-cards. We handle smog check verification and insurance validation through the state database automatically.</p>
+          <div class="flex items-center text-amber-400 font-bold group-hover:gap-4 gap-2 transition-all cursor-pointer">
+            Start Renewal <span class="material-symbols-outlined">arrow_forward</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Title Transfers -->
+      <div class="relative h-[400px] rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-500">
+        <img alt="Bixby Bridge Big Sur California" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCueqcE0dJocMhuytmt9yljNQk1t3g1FkGupYJ84Fm3dw8XTmQ-8aGeVNEvQIxGdV4Wi1kq3TJ-QibLNZiUVaYwlzyVx36OD4bUd-NXcpLE8qzDnN_Bsc7Rt_qkUbAXHShTqPqPuHMl7JiM-cc3UHdydh9w8SOyS6xphqPRdK7oY8q5_logBL4ym0RiLtDuXlE9km23CFfrPCfc8XH-IE230ue5wl4RoJgr__5CI5-eDBsz25xqBvmiae-VaUT0cyzJZi6EMnBRtDUb"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#001F29] via-[#001F29]/60 to-transparent"></div>
+        <div class="relative h-full p-10 flex flex-col justify-end text-white">
+          <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-2xl">move_up</span>
+          </div>
+          <h3 class="text-2xl font-extrabold mb-4">Title Transfers</h3>
+          <p class="text-slate-200 mb-8">Bought or sold a vehicle? Transfer ownership in California seamlessly without visiting the field office.</p>
+          <div class="flex items-center text-amber-400 font-bold group-hover:gap-4 gap-2 transition-all cursor-pointer">
+            Inquire Now <span class="material-symbols-outlined">arrow_forward</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate Sticker -->
+      <div class="relative h-[300px] rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-500">
+        <img alt="Coastal road California" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtgyGUXkKuKifKPg7jY6zpH8Nx3uMZOARqT3_UUrHrBznKM8fjgrKbrlpEgoNCADs_d25abLtvrwFjpgAr4DQgRF_8FzlKhJdPGvDMVet7dTj7TSCgvSac7SLwIa8j8KmADn2rmN90sQI_ejBvty_lk9Bng3ofiOmvQvVH1rRErzIkcjzTzE2hFF4hpYjoplnScd0fyxNm4b6empm9rian0gwjyPupCK3O1GBkCT8fBKh9V3-7VFsFivcappMBsMpBQMUrndb3GsRx"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#001F29] via-[#001F29]/70 to-transparent"></div>
+        <div class="relative h-full p-8 flex flex-col justify-end text-white">
+          <span class="material-symbols-outlined text-3xl text-amber-400 mb-4">layers</span>
+          <h3 class="text-xl font-extrabold mb-2">Duplicate Sticker</h3>
+          <p class="text-slate-300 text-sm">Lost your CA tags? Get replacements shipped overnight to your doorstep.</p>
+        </div>
+      </div>
+
+      <!-- Boat & OHV -->
+      <div class="relative h-[300px] rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-500">
+        <img alt="Lake Tahoe California" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4VjAPqccHKk0v4fbCJik3Ntnrq3_FmUz6oxLo6k7XnFVrlRA1dEUTLwIlBHLieffzOKm8nc2TjuqjvjnLJCsLuKGB1ee8nzr_X49OfFvUpDPVMhw6bD1pbdaU1fU2YwouXBePNE8pVBir6uF2cyv3MBX_nIm6GwnBIlS0bU9wzt8HwKSJDXMnOb1pknRkDjAOvOWzQriDORK91IooUmjKjyh2dwvxUBNKBcMLVSuiwsA5Lgsn4jzIUzX-to9aqbr6gBOLhBKOrTXV"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#001F29] via-[#001F29]/70 to-transparent"></div>
+        <div class="relative h-full p-8 flex flex-col justify-end text-white">
+          <span class="material-symbols-outlined text-3xl text-amber-400 mb-4">sailing</span>
+          <h3 class="text-xl font-extrabold mb-2">Boat &amp; OHV</h3>
+          <p class="text-slate-300 text-sm">Official California vessel and off-road vehicle registration services.</p>
+        </div>
+      </div>
+
+      <!-- Fleet Management -->
+      <div class="relative h-[300px] rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-500">
+        <img alt="Los Angeles freeway" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Y30InrifwVcLpJcfvwbxoA-qhpnMCWueioq4blK49IUCW3s8AFwTQsAcj_tLNv0DOuPqKY7FhJGyt6G3FDYfxn7fTcEjYB9FUhPXYGZVIsHMwC43GE2MPMIyJwDY2FOrBkmCLj1inXIIjbVr4zoyR3YyUjn0CnUPBCXjFn58lxtinXEjWUiUMnCs56aLgbRsoAXABH3kR0VWJIiF7qv021nYamF8emSbqQkfZAYNFABKahxUJYiQUCJfaQlTx_dPonulJ9vWTZWj"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#001F29] via-[#001F29]/70 to-transparent"></div>
+        <div class="relative h-full p-8 flex flex-col justify-end text-white">
+          <span class="material-symbols-outlined text-3xl text-amber-400 mb-4">local_shipping</span>
+          <h3 class="text-xl font-extrabold mb-2">Fleet Management</h3>
+          <p class="text-slate-300 text-sm">Comprehensive bulk solutions for commercial fleets across the state.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-[#001F29] text-white py-32 overflow-hidden relative">
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full opacity-[0.03] pointer-events-none">
+      <span class="material-symbols-outlined text-[40rem] rotate-12">verified</span>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+      <div class="mb-16">
+        <h2 class="text-4xl font-extrabold mb-4 tracking-tight">Built for California. Built for Speed.</h2>
+        <div class="h-1 w-20 bg-amber-400 rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+        <div class="space-y-6">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/20">
+            <span class="material-symbols-outlined text-2xl">schedule</span>
+          </div>
+          <h4 class="text-2xl font-extrabold">24/7 Processing</h4>
+          <p class="text-slate-400 leading-relaxed font-medium">Our automated California systems work around the clock, ensuring your paperwork is submitted to the state database the moment it's received.</p>
+        </div>
+        <div class="space-y-6">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/20">
+            <span class="material-symbols-outlined text-2xl">translate</span>
+          </div>
+          <h4 class="text-2xl font-extrabold">Multilingual Support</h4>
+          <p class="text-slate-400 leading-relaxed font-medium">We speak the language of California. Expert support available in English, Spanish, Chinese, and Vietnamese.</p>
+        </div>
+        <div class="space-y-6">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/20">
+            <span class="material-symbols-outlined text-2xl">encrypted</span>
+          </div>
+          <h4 class="text-2xl font-extrabold">Secure &amp; Licensed</h4>
+          <p class="text-slate-400 leading-relaxed font-medium">Fully licensed CA DMV partner utilizing bank-grade encryption to protect your sensitive vehicle data and privacy.</p>
+        </div>
+        <div class="space-y-6">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/20">
+            <span class="material-symbols-outlined text-2xl">payments</span>
+          </div>
+          <h4 class="text-2xl font-extrabold">Secure Online Payments</h4>
+          <p class="text-slate-400 leading-relaxed font-medium">Pay fees securely via Stripe. Instant email confirmations and payment tracking so you always have a record.</p>
+        </div>
+        <div class="space-y-6">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/20">
+            <span class="material-symbols-outlined text-2xl">support_agent</span>
+          </div>
+          <h4 class="text-2xl font-extrabold">AI-Powered Assistance</h4>
+          <p class="text-slate-400 leading-relaxed font-medium">Our intelligent chatbot answers your questions instantly in 4 languages. No hold times, no wait, available any time of day.</p>
+        </div>
+        <div class="space-y-6">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/20">
+            <span class="material-symbols-outlined text-2xl">verified_user</span>
+          </div>
+          <h4 class="text-2xl font-extrabold">State Authorized</h4>
+          <p class="text-slate-400 leading-relaxed font-medium">Official CA DMV authorized partner. Your registrations are submitted directly to the state database. No middlemen, no delays.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Yelp Reviews Section -->
+  <section class="py-24 bg-white" id="reviews">
+    <div class="max-w-7xl mx-auto px-8">
+
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+        <div>
+          <span class="inline-block py-1.5 px-4 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-600 text-[10px] font-bold uppercase tracking-[0.22em] mb-6">Real Reviews</span>
+          <h2 class="text-4xl font-extrabold text-primary mb-4 tracking-tight">What Our Customers Say</h2>
+          <div class="h-1 w-20 bg-amber-400 rounded-full"></div>
+        </div>
+
+        <!-- Yelp Rating Summary -->
+        <a href="https://www.yelp.com/biz/ez-auto-license-santa-ana" target="_blank" rel="noopener noreferrer"
+           class="flex-shrink-0 flex items-center gap-5 bg-slate-50 border border-slate-100 rounded-2xl px-7 py-5 hover:shadow-lg transition-shadow group">
+          <!-- Yelp Logo SVG (brand colors) -->
+          <svg width="56" height="28" viewBox="0 0 56 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Yelp" role="img">
+            <path d="M10.3 19.6l-3.8 1.6c-.9.4-1.8-.4-1.6-1.4l.8-4c.1-.7.8-1.1 1.4-.8l3 1.4c.9.4.9 1.7.2 2.2zm-3.5-7.3L3 10.8c-.8-.5-.8-1.7 0-2.2l3.8-2.3c.6-.4 1.4 0 1.5.7l.5 4.1c.1 1-.8 1.7-1.7 1.4-.1 0-.2-.1-.3-.2zm5.6-5.4l-.5-4.1c-.1-.7.5-1.3 1.2-1.2l4.1.5c.7.1 1.1.9.7 1.5L15.6 7c-.5.8-1.7.8-2.2 0l-.1-.1zm6.2 4.3l3.5-2.2c.6-.4 1.4 0 1.5.7l.3 4.1c.1.8-.7 1.4-1.4 1.1l-3.8-1.5c-.9-.4-1-1.5-.4-2.1l.3-.1zm-1.5 5.9l2.2 3.5c.4.6 0 1.4-.7 1.5l-4.1.3c-.8.1-1.4-.7-1.1-1.4l1.5-3.8c.4-.9 1.5-1 2.1-.4l.1.3z" fill="#FF1A1A"/>
+            <text x="23" y="20" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#FF1A1A">yelp</text>
+          </svg>
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <!-- 4 filled stars + 1 partial — amber brand color -->
+              <div class="flex items-center gap-0.5" aria-label="4.1 out of 5 stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <span class="font-extrabold text-primary text-lg">4.1</span>
+            </div>
+            <p class="text-slate-500 text-xs font-medium">62 reviews on Yelp</p>
+          </div>
+          <span class="material-symbols-outlined text-slate-300 group-hover:text-slate-400 transition-colors">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Review Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Review 1 -->
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow flex flex-col">
+          <div class="flex items-center gap-1 mb-5" aria-label="5 stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-on-surface-variant italic mb-6 text-base leading-relaxed flex-1">"Fast, easy, and convenient. I had an issue with my registration and they took care of everything quickly. The staff was super helpful and explained everything clearly. Will definitely be coming back."</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <div class="w-10 h-10 rounded-full bg-amber-400/15 flex items-center justify-center text-[#001F29] font-bold text-sm flex-shrink-0">A</div>
+            <div>
+              <h5 class="font-bold text-primary text-sm">Yelp Reviewer</h5>
+              <p class="text-xs text-slate-400 font-medium">Santa Ana, CA</p>
+            </div>
+            <!-- Yelp logo (brand colors) -->
+            <svg class="ml-auto flex-shrink-0 opacity-40" width="36" height="18" viewBox="0 0 56 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.3 19.6l-3.8 1.6c-.9.4-1.8-.4-1.6-1.4l.8-4c.1-.7.8-1.1 1.4-.8l3 1.4c.9.4.9 1.7.2 2.2zm-3.5-7.3L3 10.8c-.8-.5-.8-1.7 0-2.2l3.8-2.3c.6-.4 1.4 0 1.5.7l.5 4.1c.1 1-.8 1.7-1.7 1.4-.1 0-.2-.1-.3-.2zm5.6-5.4l-.5-4.1c-.1-.7.5-1.3 1.2-1.2l4.1.5c.7.1 1.1.9.7 1.5L15.6 7c-.5.8-1.7.8-2.2 0l-.1-.1zm6.2 4.3l3.5-2.2c.6-.4 1.4 0 1.5.7l.3 4.1c.1.8-.7 1.4-1.4 1.1l-3.8-1.5c-.9-.4-1-1.5-.4-2.1l.3-.1zm-1.5 5.9l2.2 3.5c.4.6 0 1.4-.7 1.5l-4.1.3c-.8.1-1.4-.7-1.1-1.4l1.5-3.8c.4-.9 1.5-1 2.1-.4l.1.3z" fill="#FF1A1A"/>
+              <text x="23" y="20" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#FF1A1A">yelp</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow flex flex-col">
+          <div class="flex items-center gap-1 mb-5" aria-label="5 stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-on-surface-variant italic mb-6 text-base leading-relaxed flex-1">"Came in to transfer a title and it was a smooth process. The lady at the front was very knowledgeable and professional. In and out in less than 20 minutes. Much better than going to the actual DMV."</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <div class="w-10 h-10 rounded-full bg-amber-400/15 flex items-center justify-center text-[#001F29] font-bold text-sm flex-shrink-0">M</div>
+            <div>
+              <h5 class="font-bold text-primary text-sm">Yelp Reviewer</h5>
+              <p class="text-xs text-slate-400 font-medium">Orange County, CA</p>
+            </div>
+            <svg class="ml-auto flex-shrink-0 opacity-40" width="36" height="18" viewBox="0 0 56 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.3 19.6l-3.8 1.6c-.9.4-1.8-.4-1.6-1.4l.8-4c.1-.7.8-1.1 1.4-.8l3 1.4c.9.4.9 1.7.2 2.2zm-3.5-7.3L3 10.8c-.8-.5-.8-1.7 0-2.2l3.8-2.3c.6-.4 1.4 0 1.5.7l.5 4.1c.1 1-.8 1.7-1.7 1.4-.1 0-.2-.1-.3-.2zm5.6-5.4l-.5-4.1c-.1-.7.5-1.3 1.2-1.2l4.1.5c.7.1 1.1.9.7 1.5L15.6 7c-.5.8-1.7.8-2.2 0l-.1-.1zm6.2 4.3l3.5-2.2c.6-.4 1.4 0 1.5.7l.3 4.1c.1.8-.7 1.4-1.4 1.1l-3.8-1.5c-.9-.4-1-1.5-.4-2.1l.3-.1zm-1.5 5.9l2.2 3.5c.4.6 0 1.4-.7 1.5l-4.1.3c-.8.1-1.4-.7-1.1-1.4l1.5-3.8c.4-.9 1.5-1 2.1-.4l.1.3z" fill="#FF1A1A"/>
+              <text x="23" y="20" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#FF1A1A">yelp</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow flex flex-col">
+          <div class="flex items-center gap-1 mb-5" aria-label="5 stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-on-surface-variant italic mb-6 text-base leading-relaxed flex-1">"Great service! They renewed my registration quickly and saved me a trip to the DMV. Staff was friendly and bilingual which was very helpful. I highly recommend this place to anyone who needs DMV services."</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <div class="w-10 h-10 rounded-full bg-amber-400/15 flex items-center justify-center text-[#001F29] font-bold text-sm flex-shrink-0">J</div>
+            <div>
+              <h5 class="font-bold text-primary text-sm">Yelp Reviewer</h5>
+              <p class="text-xs text-slate-400 font-medium">Santa Ana, CA</p>
+            </div>
+            <svg class="ml-auto flex-shrink-0 opacity-40" width="36" height="18" viewBox="0 0 56 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.3 19.6l-3.8 1.6c-.9.4-1.8-.4-1.6-1.4l.8-4c.1-.7.8-1.1 1.4-.8l3 1.4c.9.4.9 1.7.2 2.2zm-3.5-7.3L3 10.8c-.8-.5-.8-1.7 0-2.2l3.8-2.3c.6-.4 1.4 0 1.5.7l.5 4.1c.1 1-.8 1.7-1.7 1.4-.1 0-.2-.1-.3-.2zm5.6-5.4l-.5-4.1c-.1-.7.5-1.3 1.2-1.2l4.1.5c.7.1 1.1.9.7 1.5L15.6 7c-.5.8-1.7.8-2.2 0l-.1-.1zm6.2 4.3l3.5-2.2c.6-.4 1.4 0 1.5.7l.3 4.1c.1.8-.7 1.4-1.4 1.1l-3.8-1.5c-.9-.4-1-1.5-.4-2.1l.3-.1zm-1.5 5.9l2.2 3.5c.4.6 0 1.4-.7 1.5l-4.1.3c-.8.1-1.4-.7-1.1-1.4l1.5-3.8c.4-.9 1.5-1 2.1-.4l.1.3z" fill="#FF1A1A"/>
+              <text x="23" y="20" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#FF1A1A">yelp</text>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- View all reviews link -->
+      <div class="text-center mt-12">
+        <a href="https://www.yelp.com/biz/ez-auto-license-santa-ana" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors">
+          See all 62 reviews on
+          <svg width="40" height="20" viewBox="0 0 56 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Yelp">
+            <path d="M10.3 19.6l-3.8 1.6c-.9.4-1.8-.4-1.6-1.4l.8-4c.1-.7.8-1.1 1.4-.8l3 1.4c.9.4.9 1.7.2 2.2zm-3.5-7.3L3 10.8c-.8-.5-.8-1.7 0-2.2l3.8-2.3c.6-.4 1.4 0 1.5.7l.5 4.1c.1 1-.8 1.7-1.7 1.4-.1 0-.2-.1-.3-.2zm5.6-5.4l-.5-4.1c-.1-.7.5-1.3 1.2-1.2l4.1.5c.7.1 1.1.9.7 1.5L15.6 7c-.5.8-1.7.8-2.2 0l-.1-.1zm6.2 4.3l3.5-2.2c.6-.4 1.4 0 1.5.7l.3 4.1c.1.8-.7 1.4-1.4 1.1l-3.8-1.5c-.9-.4-1-1.5-.4-2.1l.3-.1zm-1.5 5.9l2.2 3.5c.4.6 0 1.4-.7 1.5l-4.1.3c-.8.1-1.4-.7-1.1-1.4l1.5-3.8c.4-.9 1.5-1 2.1-.4l.1.3z" fill="#FF1A1A"/>
+            <text x="23" y="20" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#FF1A1A">yelp</text>
+          </svg>
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Fleet Program Highlight -->
+  <section id="fleet" class="py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      <div class="relative order-2 md:order-1">
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-amber-400/20 rounded-xl z-0 blur-3xl"></div>
+        <img class="rounded-2xl shadow-2xl relative z-10 w-full h-[550px] object-cover" alt="Logistics center with trucks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2KTyiuCGl_Yk1qd_NL_R3sKoaoGwffM97FqV-ZZp-eNv4ZHguZfBvhvEv8kqvYWJXs_ZSWDJvcY1fgWRrvv9ytSt6_TdakjHeysUsVnRIkzbjXs-DASeoW7_DJpdCFT-JeY8mGT2hVFTw0hhnwHQRFmV-F_Wzm077vE0OITCQludcXqS4O4ZkKeKlvLnAPfVh-h8YpjXSqTxE32m5yVPxLYgdYqU0dSC96EvFGUVXDGzMkCUP0hZR1JsYZgiiQ8cHn5-j7FhUuTux"/>
+      </div>
+      <div class="order-1 md:order-2">
+        <span class="inline-block py-1.5 px-4 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-600 text-[10px] font-bold uppercase tracking-[0.2em] mb-6">Fleet Programs</span>
+        <h2 class="text-4xl font-extrabold text-primary mb-8 tracking-tight">Managing 5 Vehicles or 5,000?</h2>
+        <p class="text-on-surface-variant text-lg mb-10 leading-relaxed">Consolidate your entire California fleet into one digital dashboard. Bulk renewals, title archiving, and compliance reporting handled automatically for any fleet size across the Golden State.</p>
+        <ul class="space-y-6 mb-12">
+          <li class="flex items-center gap-4 font-bold text-primary">
+            <span class="material-symbols-outlined text-amber-500">check_circle</span> Volume-Based Pricing Tiers
+          </li>
+          <li class="flex items-center gap-4 font-bold text-primary">
+            <span class="material-symbols-outlined text-amber-500">check_circle</span> Dedicated CA Account Manager
+          </li>
+          <li class="flex items-center gap-4 font-bold text-primary">
+            <span class="material-symbols-outlined text-amber-500">check_circle</span> API Integration for Logistics Platforms
+          </li>
+          <li class="flex items-center gap-4 font-bold text-primary">
+            <span class="material-symbols-outlined text-amber-500">check_circle</span> Priority Processing &amp; Compliance Reporting
+          </li>
+        </ul>
+        <button class="bg-[#001F29] text-white px-10 py-5 rounded-lg font-extrabold hover:bg-slate-800 transition-all shadow-xl shadow-slate-900/10">Inquire for B2B Pricing</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- OMV Services Highlight -->
+  <section id="omv" class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="mb-16">
+        <h2 class="text-4xl font-extrabold text-primary mb-4 tracking-tight">More Services, Zero Hassle</h2>
+        <div class="h-1 w-20 bg-amber-400 rounded-full"></div>
+        <p class="text-on-surface-variant mt-6 text-lg max-w-2xl">From traffic school to suspended registrations, we handle the complicated DMV processes so you never have to step foot in an office.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-lg transition-shadow group">
+          <div class="w-12 h-12 bg-primary/5 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-400/10 transition-colors">
+            <span class="material-symbols-outlined text-primary group-hover:text-amber-600 transition-colors">local_police</span>
+          </div>
+          <h4 class="font-extrabold text-primary mb-3 text-lg">Traffic School</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Dismiss tickets and reduce insurance points with our approved traffic school programs.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-lg transition-shadow group">
+          <div class="w-12 h-12 bg-primary/5 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-400/10 transition-colors">
+            <span class="material-symbols-outlined text-primary group-hover:text-amber-600 transition-colors">receipt_long</span>
+          </div>
+          <h4 class="font-extrabold text-primary mb-3 text-lg">Parking &amp; Toll Tickets</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Pay and resolve parking violations and toll tickets quickly through our secure payment portal.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-lg transition-shadow group">
+          <div class="w-12 h-12 bg-primary/5 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-400/10 transition-colors">
+            <span class="material-symbols-outlined text-primary group-hover:text-amber-600 transition-colors">lock_open</span>
+          </div>
+          <h4 class="font-extrabold text-primary mb-3 text-lg">Clear Suspended Registration</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Resolve suspended registrations and get back on the road with expert CA DMV guidance.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-lg transition-shadow group">
+          <div class="w-12 h-12 bg-primary/5 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-400/10 transition-colors">
+            <span class="material-symbols-outlined text-primary group-hover:text-amber-600 transition-colors">description</span>
+          </div>
+          <h4 class="font-extrabold text-primary mb-3 text-lg">FLSP Services</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Field Licensing Service Program processing for specialized vehicle categories and registrations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit Our Office Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid md:grid-cols-2 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
+
+        <!-- Office Photo -->
+        <div class="relative min-h-[420px]">
+          <img
+            src="https://dl.dropboxusercontent.com/scl/fi/13nvybqp3djyz6npqn11r/ezautolicenseoffice.jpg?rlkey=rlsoqgbwd9xnh72w0rywbqow2"
+            alt="EZ Auto License office in Santa Ana, California sign on brick wall with license plates"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        </div>
+
+        <!-- Office Info -->
+        <div class="bg-white p-10 md:p-14 flex flex-col justify-center">
+          <span class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-700 text-[10px] font-bold uppercase tracking-[0.2em] mb-6 w-fit">
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">store</span>
+            In-Person Service Available
+          </span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-primary mb-4 tracking-tight">Come See Us<br>In Person</h2>
+          <p class="text-on-surface-variant leading-relaxed mb-8">Prefer face-to-face help? Our bilingual team is ready to assist you with any CA DMV service right from our Santa Ana office. No appointment needed.</p>
+
+          <!-- Address -->
+          <div class="flex items-start gap-4 mb-5">
+            <div class="w-10 h-10 rounded-lg bg-amber-400/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="material-symbols-outlined text-amber-600 text-lg" aria-hidden="true">location_on</span>
+            </div>
+            <div>
+              <p class="font-bold text-primary text-sm">Address</p>
+              <p class="text-on-surface-variant text-sm leading-relaxed">100 N Harbor Blvd Ste C5<br>Santa Ana, CA 92703</p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="flex items-start gap-4 mb-8">
+            <div class="w-10 h-10 rounded-lg bg-amber-400/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-amber-600 text-lg" aria-hidden="true">phone</span>
+            </div>
+            <div>
+              <p class="font-bold text-primary text-sm">Phone</p>
+              <a href="tel:7145548093" class="text-on-surface-variant text-sm hover:text-primary transition-colors">(714) 554-8093</a>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-row gap-3 flex-wrap">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=100+N+Harbor+Blvd+Ste+C5+Santa+Ana+CA+92703"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-[#001F29] text-white font-bold px-6 py-3 rounded-full text-sm hover:bg-slate-800 transition-all shadow-md whitespace-nowrap"
+            >
+              <span class="material-symbols-outlined text-base" aria-hidden="true">directions</span>
+              Get Directions
+            </a>
+            <a
+              href="tel:7145548093"
+              class="inline-flex items-center gap-2 bg-amber-400 text-[#001F29] font-bold px-6 py-3 rounded-full text-sm hover:bg-amber-300 transition-all shadow-md whitespace-nowrap"
+            >
+              <span class="material-symbols-outlined text-base" aria-hidden="true">phone</span>
+              Call Us
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section id="contact" class="py-24 max-w-7xl mx-auto px-8">
+    <div class="bg-[#001F29] rounded-[32px] overflow-hidden shadow-2xl relative min-h-[480px] flex items-center">
+
+      <!-- Background image, shifted right so subject's face clears the gradient -->
+      <img
+        src="https://dl.dropboxusercontent.com/scl/fi/92iar6gcisx1rxms4xtsm/bohemian-personalities-going-adventure-together.jpg?rlkey=lx8k7zg5cl2nwx2246vsm4dbq"
+        alt="Happy customers holding their vehicle registration documents"
+        class="absolute inset-0 w-full h-full object-cover"
+        style="object-position: 70% center;"
+      />
+
+      <!-- Left-to-right gradient: solid navy on left fading to transparent on right -->
+      <div class="absolute inset-0" style="background: linear-gradient(to right, #001F29 35%, rgba(0,31,41,0.80) 52%, rgba(0,31,41,0.15) 72%, transparent 100%);"></div>
+
+      <!-- Subtle amber glow top-left -->
+      <div class="absolute top-0 left-0 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none" style="background: radial-gradient(circle, #FFB800, transparent 70%);"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 w-full px-12 md:px-16 py-16">
+        <div class="max-w-lg">
+          <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-5 tracking-tight leading-[1.05]">
+            Your tags.<br><span class="text-amber-400">Delivered.</span>
+          </h2>
+          <p class="text-lg text-slate-300 mb-9 font-medium leading-relaxed">
+            No office. No wait. No stress. Join over 100,000 California drivers who handle their vehicle registration in minutes, from home, 24/7.
+          </p>
+          <div class="flex flex-row gap-3 items-center">
+            <button class="bg-amber-400 text-[#001F29] font-extrabold px-7 py-4 rounded-full text-sm shadow-xl shadow-amber-400/20 hover:bg-amber-300 transition-all active:scale-95 whitespace-nowrap">Renew My Registration</button>
+            <button class="bg-white/10 text-white border border-white/20 font-extrabold px-7 py-4 rounded-full text-sm backdrop-blur-md hover:bg-white/20 transition-all whitespace-nowrap">See All Services</button>
+          </div>
+          <p class="text-slate-500 text-xs mt-5">No account needed &middot; 256-bit encryption &middot; CA DMV Authorized</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- AI Chat Widget -->
+<div id="chat-widget" class="fixed bottom-6 right-6 z-50">
+  <button onclick="document.getElementById('chat-panel').classList.toggle('hidden')" class="w-16 h-16 bg-amber-400 text-[#001F29] rounded-full shadow-2xl shadow-amber-400/30 flex items-center justify-center hover:bg-amber-300 transition-all hover:scale-110 active:scale-95">
+    <span class="material-symbols-outlined text-3xl">support_agent</span>
+  </button>
+  <div id="chat-panel" class="hidden absolute bottom-20 right-0 w-80 bg-[#001F29] rounded-2xl shadow-2xl border border-white/10 overflow-hidden">
+    <div class="p-5 border-b border-white/10 flex items-center gap-3">
+      <div class="w-9 h-9 bg-amber-400 rounded-full flex items-center justify-center">
+        <span class="material-symbols-outlined text-[#001F29] text-lg">support_agent</span>
+      </div>
+      <div>
+        <p class="text-white font-bold text-sm">EZ Auto Assistant</p>
+        <p class="text-slate-400 text-xs">English · Español · 中文 · Tiếng Việt</p>
+      </div>
+      <span class="ml-auto w-2 h-2 bg-green-400 rounded-full"></span>
+    </div>
+    <div class="p-5 space-y-3">
+      <div class="bg-white/10 rounded-xl p-4">
+        <p class="text-white text-sm">Hi! How can I help you today? I can assist with registration, title transfers, and more.</p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1.5 rounded-full hover:bg-amber-400/20 hover:border-amber-400/30 hover:text-amber-400 transition-all">Renew registration</button>
+        <button class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1.5 rounded-full hover:bg-amber-400/20 hover:border-amber-400/30 hover:text-amber-400 transition-all">Title transfer</button>
+        <button class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1.5 rounded-full hover:bg-amber-400/20 hover:border-amber-400/30 hover:text-amber-400 transition-all">Fleet pricing</button>
+      </div>
+    </div>
+    <div class="p-4 border-t border-white/10 flex gap-2">
+      <input type="text" placeholder="Ask a question..." class="flex-1 bg-white/5 border border-white/10 text-white text-sm placeholder-slate-500 rounded-lg px-4 py-2.5 outline-none focus:ring-2 focus:ring-amber-400/50 transition-all"/>
+      <button class="w-9 h-9 bg-amber-400 text-[#001F29] rounded-lg flex items-center justify-center hover:bg-amber-300 transition-all flex-shrink-0">
+        <span class="material-symbols-outlined text-lg">send</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-[#001F29] border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-12 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div class="md:col-span-1">
+        <!-- Footer logo (mirrors header) -->
+        <a href="#main-content" class="flex items-center gap-2.5 mb-5 group w-fit">
+          <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+            <rect width="40" height="40" rx="10" fill="#FFB800"/>
+            <path d="M23 5L10 22H19.5L17 35L31 17H21L23 5Z" fill="#001F29"/>
+            <rect x="5" y="17" width="4" height="2" rx="1" fill="#001F29" opacity="0.35"/>
+            <rect x="4" y="21" width="3" height="2" rx="1" fill="#001F29" opacity="0.25"/>
+          </svg>
+          <div class="leading-none flex flex-col gap-0.5">
+            <div class="font-['Manrope'] font-black italic tracking-tight leading-none text-[18px]">
+              <span class="text-[#FFB800]">EZ</span><span class="text-white"> AUTO</span>
+            </div>
+            <div class="text-slate-500 font-['Manrope'] font-semibold text-[9px] tracking-[0.28em] uppercase">LICENSE</div>
+          </div>
+        </a>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">California's trusted DMV-authorized vehicle registration service. Fast, secure, and always available.</p>
+        <div class="flex gap-3">
+          <span class="w-9 h-9 bg-white/5 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
+            <span class="material-symbols-outlined text-slate-400 text-sm">public</span>
+          </span>
+          <span class="w-9 h-9 bg-white/5 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
+            <span class="material-symbols-outlined text-slate-400 text-sm">mail</span>
+          </span>
+          <span class="w-9 h-9 bg-white/5 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
+            <span class="material-symbols-outlined text-slate-400 text-sm">phone</span>
+          </span>
+        </div>
+      </div>
+      <div>
+        <h6 class="text-white font-bold text-sm mb-5 uppercase tracking-wider">Services</h6>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li><a href="#" class="hover:text-white transition-colors">Registration Renewal</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Title Transfers</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Boat &amp; OHV Registration</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Duplicate Sticker</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">OMV Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="text-white font-bold text-sm mb-5 uppercase tracking-wider">Company</h6>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Fleet Programs</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Blog &amp; Resources</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Testimonials</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="text-white font-bold text-sm mb-5 uppercase tracking-wider">Payments &amp; Support</h6>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li><a href="#" class="hover:text-white transition-colors">Payment Portal</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Pay Parking Ticket</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Pay Toll Violations</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Required Documents</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Request Information</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex flex-wrap justify-center gap-6">
+        <a class="text-slate-400 text-xs tracking-wide hover:text-white transition-colors" href="#">Privacy Policy</a>
+        <a class="text-slate-400 text-xs tracking-wide hover:text-white transition-colors" href="#">Terms of Service</a>
+        <a class="text-slate-400 text-xs tracking-wide hover:text-white transition-colors" href="#">Accessibility</a>
+        <a class="text-slate-400 text-xs tracking-wide hover:text-white transition-colors" href="#">Site Map</a>
+        <a class="text-slate-400 text-xs tracking-wide hover:text-white transition-colors" href="#">Careers</a>
+      </div>
+      <div class="text-right">
+        <p class="text-slate-400 text-xs">© 2026 EZ Auto License. The Gold Standard in Digital DMV Services.</p>
+        <p class="text-slate-500 text-[10px] mt-1 uppercase tracking-[0.1em]">California State Authorized Partner</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body></html>
