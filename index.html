@@ -174,43 +174,51 @@
         </div>
         <h1 class="text-6xl md:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">Done waiting<br>at the DMV?</h1>
         <p class="text-xl text-slate-300 mb-10 leading-relaxed max-w-lg font-medium">A California family business serving drivers for over 40 years. Renew your registration, transfer a title, or replace lost stickers. All online, in minutes, without ever visiting a field office.</p>
-        <!-- Quick-Start Service Selector -->
-        <div class="bg-[#001F29]/75 backdrop-blur-xl p-6 rounded-2xl border border-white/15 max-w-md shadow-2xl">
-          <p class="text-amber-400 font-bold text-xs uppercase tracking-[0.18em] mb-4">What do you need today?</p>
-          <div class="space-y-2 mb-5" role="radiogroup" aria-label="Select a service">
-            <label class="service-option flex items-center gap-3 p-3.5 rounded-xl border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
+        <!-- Quick-Start Form -->
+        <div class="bg-[#001F29]/80 backdrop-blur-xl p-6 rounded-2xl border border-white/15 shadow-2xl w-full max-w-2xl">
+          <!-- Input fields: 2-column grid -->
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="f-plate" class="block text-[10px] font-bold text-amber-400 uppercase tracking-widest mb-1.5">License Plate No.</label>
+              <input id="f-plate" type="text" placeholder="e.g. 7ABC123" autocomplete="off" class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"/>
+            </div>
+            <div>
+              <label for="f-vin" class="block text-[10px] font-bold text-amber-400 uppercase tracking-widest mb-1.5">Last 5 of VIN</label>
+              <input id="f-vin" type="text" placeholder="e.g. AB123" maxlength="5" autocomplete="off" class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"/>
+            </div>
+            <div>
+              <label for="f-zip" class="block text-[10px] font-bold text-amber-400 uppercase tracking-widest mb-1.5">Zip Code</label>
+              <input id="f-zip" type="text" placeholder="e.g. 92703" maxlength="5" autocomplete="postal-code" class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"/>
+            </div>
+            <div>
+              <label for="f-email" class="block text-[10px] font-bold text-amber-400 uppercase tracking-widest mb-1.5">Email Address</label>
+              <input id="f-email" type="email" placeholder="you@email.com" autocomplete="email" class="w-full bg-white/8 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"/>
+            </div>
+          </div>
+          <!-- Radio options: 2-column grid -->
+          <div class="grid grid-cols-2 gap-2 mb-4" role="radiogroup" aria-label="Select a service">
+            <label class="flex items-center gap-2.5 p-3 rounded-lg border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
               <input type="radio" name="service" value="registration.html" class="sr-only" checked/>
-              <span class="w-4 h-4 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-[#001F29] hidden group-has-[:checked]:block"></span></span>
-              <span class="material-symbols-outlined text-slate-400 text-lg group-has-[:checked]:text-amber-400 transition-colors" aria-hidden="true">autorenew</span>
-              <span class="text-slate-300 text-sm font-semibold group-has-[:checked]:text-white transition-colors">Renew Vehicle Registration</span>
+              <span class="w-3.5 h-3.5 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all"></span>
+              <span class="text-slate-300 text-xs font-semibold group-has-[:checked]:text-white transition-colors leading-tight">Renew Vehicle Registration</span>
             </label>
-            <label class="service-option flex items-center gap-3 p-3.5 rounded-xl border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
-              <input type="radio" name="service" value="title-transfer.html" class="sr-only"/>
-              <span class="w-4 h-4 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-[#001F29] hidden group-has-[:checked]:block"></span></span>
-              <span class="material-symbols-outlined text-slate-400 text-lg group-has-[:checked]:text-amber-400 transition-colors" aria-hidden="true">swap_horiz</span>
-              <span class="text-slate-300 text-sm font-semibold group-has-[:checked]:text-white transition-colors">Transfer Vehicle Title</span>
-            </label>
-            <label class="service-option flex items-center gap-3 p-3.5 rounded-xl border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
+            <label class="flex items-center gap-2.5 p-3 rounded-lg border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
               <input type="radio" name="service" value="sticker.html" class="sr-only"/>
-              <span class="w-4 h-4 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-[#001F29] hidden group-has-[:checked]:block"></span></span>
-              <span class="material-symbols-outlined text-slate-400 text-lg group-has-[:checked]:text-amber-400 transition-colors" aria-hidden="true">label</span>
-              <span class="text-slate-300 text-sm font-semibold group-has-[:checked]:text-white transition-colors">Replace Lost Sticker / Registration Card</span>
+              <span class="w-3.5 h-3.5 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all"></span>
+              <span class="text-slate-300 text-xs font-semibold group-has-[:checked]:text-white transition-colors leading-tight">Replace Lost Sticker / Reg. Card</span>
             </label>
-            <label class="service-option flex items-center gap-3 p-3.5 rounded-xl border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
+            <label class="flex items-center gap-2.5 p-3 rounded-lg border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
+              <input type="radio" name="service" value="title-transfer.html" class="sr-only"/>
+              <span class="w-3.5 h-3.5 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all"></span>
+              <span class="text-slate-300 text-xs font-semibold group-has-[:checked]:text-white transition-colors leading-tight">Transfer Vehicle Title</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-3 rounded-lg border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
               <input type="radio" name="service" value="suspended-registration.html" class="sr-only"/>
-              <span class="w-4 h-4 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-[#001F29] hidden group-has-[:checked]:block"></span></span>
-              <span class="material-symbols-outlined text-slate-400 text-lg group-has-[:checked]:text-amber-400 transition-colors" aria-hidden="true">lock_open</span>
-              <span class="text-slate-300 text-sm font-semibold group-has-[:checked]:text-white transition-colors">Clear Suspended Registration</span>
-            </label>
-            <label class="service-option flex items-center gap-3 p-3.5 rounded-xl border border-white/10 cursor-pointer hover:border-amber-400/50 hover:bg-white/5 transition-all group has-[:checked]:border-amber-400 has-[:checked]:bg-amber-400/10">
-              <input type="radio" name="service" value="contact.html" class="sr-only"/>
-              <span class="w-4 h-4 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-[#001F29] hidden group-has-[:checked]:block"></span></span>
-              <span class="material-symbols-outlined text-slate-400 text-lg group-has-[:checked]:text-amber-400 transition-colors" aria-hidden="true">help_outline</span>
-              <span class="text-slate-300 text-sm font-semibold group-has-[:checked]:text-white transition-colors">Something Else</span>
+              <span class="w-3.5 h-3.5 rounded-full border-2 border-white/30 flex-shrink-0 group-has-[:checked]:border-amber-400 group-has-[:checked]:bg-amber-400 transition-all"></span>
+              <span class="text-slate-300 text-xs font-semibold group-has-[:checked]:text-white transition-colors leading-tight">Clear Suspended Registration</span>
             </label>
           </div>
-          <a id="hero-cta" href="registration.html" class="flex items-center justify-center gap-2 w-full bg-amber-400 text-[#001F29] font-extrabold py-4 rounded-xl hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 text-sm uppercase tracking-wide">Get Started <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_forward</span></a>
-          <p class="text-slate-500 text-xs mt-3 text-center">No account needed &middot; Walk in or call <a href="tel:7145548093" class="hover:text-slate-300 transition-colors">(714) 554-8093</a></p>
+          <a id="hero-cta" href="registration.html" class="flex items-center justify-center gap-2 w-full bg-amber-400 text-[#001F29] font-extrabold py-3.5 rounded-xl hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 text-sm uppercase tracking-widest">Get Started <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span></a>
         </div>
       </div>
     </div>
