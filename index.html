@@ -93,26 +93,57 @@
 <header class="bg-[#001F29] top-0 sticky z-50 shadow-xl shadow-slate-950/20">
   <nav aria-label="Main navigation" class="flex justify-between items-center w-full px-8 py-4 max-w-full mx-auto">
     <!-- Logo -->
-    <a href="#" class="flex items-center group flex-shrink-0">
+    <a href="index.html" class="flex items-center group flex-shrink-0">
       <img src="https://dl.dropboxusercontent.com/scl/fi/57tvv0slg705nsd5wjflj/Ez-AUto-Logo.png?rlkey=i5kzihz6kg5ulfpfz3v13zam3" alt="EZ Auto License" class="h-12 w-auto object-contain"/>
     </a>
-    <div class="hidden md:flex items-center space-x-2 font-['Manrope'] font-semibold tracking-tight text-sm">
-      <a class="bg-amber-400 text-[#001F29] rounded-full px-4 py-1.5 transition-all duration-300 font-bold" href="#services" aria-current="page">Registration</a>
-      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="#services">Title</a>
-      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="#how-it-works">How It Works</a>
-      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="#fleet">Fleet</a>
-      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="#omv">OMV</a>
-      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="#contact">Contact</a>
+    <!-- Desktop Nav -->
+    <div class="hidden lg:flex items-center space-x-1 font-['Manrope'] font-semibold tracking-tight text-sm">
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="registration.html">Registration</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="title-transfer.html">Title Transfer</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="sticker.html">Sticker</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="fleet.html">Fleet</a>
+      <!-- More Services Dropdown -->
+      <div class="relative" id="more-dropdown">
+        <button onclick="document.getElementById('more-menu').classList.toggle('hidden')" class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full flex items-center gap-1 cursor-pointer">
+          More Services <span class="material-symbols-outlined text-base leading-none" aria-hidden="true">expand_more</span>
+        </button>
+        <div id="more-menu" class="hidden absolute top-full left-0 mt-2 w-64 bg-[#001F29] border border-white/10 rounded-xl shadow-2xl z-50 py-2">
+          <a href="boat-ohv.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 text-slate-300 hover:text-white transition-colors text-sm">
+            <span class="material-symbols-outlined text-amber-400 text-base" aria-hidden="true">sailing</span> Boat &amp; OHV
+          </a>
+          <a href="suspended-registration.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 text-slate-300 hover:text-white transition-colors text-sm">
+            <span class="material-symbols-outlined text-amber-400 text-base" aria-hidden="true">lock_open</span> Clear Suspended Registration
+          </a>
+          <a href="parking-tickets.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 text-slate-300 hover:text-white transition-colors text-sm">
+            <span class="material-symbols-outlined text-amber-400 text-base" aria-hidden="true">receipt_long</span> Parking &amp; Toll Tickets
+          </a>
+          <a href="traffic-school.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 text-slate-300 hover:text-white transition-colors text-sm">
+            <span class="material-symbols-outlined text-amber-400 text-base" aria-hidden="true">local_police</span> Traffic School
+          </a>
+          <a href="flsp.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 text-slate-300 hover:text-white transition-colors text-sm">
+            <span class="material-symbols-outlined text-amber-400 text-base" aria-hidden="true">description</span> FLSP Services
+          </a>
+        </div>
+      </div>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="visit-us.html">Visit Us</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="contact.html">Contact</a>
     </div>
-    <div class="flex items-center space-x-6">
-      <button class="text-slate-300 hover:text-white transition-colors flex items-center gap-1 text-sm">
+    <div class="flex items-center space-x-4">
+      <button class="text-slate-300 hover:text-white transition-colors flex items-center gap-1 text-sm hidden md:flex">
         <span class="material-symbols-outlined text-lg">language</span>
         EN/ES
       </button>
-      <button class="bg-amber-400 text-[#001F29] px-6 py-2.5 rounded-full font-bold scale-95 active:scale-90 transition-transform shadow-lg shadow-amber-400/20">Quick Renewal</button>
+      <a href="registration.html" class="bg-amber-400 text-[#001F29] px-6 py-2.5 rounded-full font-bold active:scale-90 transition-transform shadow-lg shadow-amber-400/20 text-sm whitespace-nowrap">Quick Renewal</a>
     </div>
   </nav>
 </header>
+<script>
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    const dd = document.getElementById('more-dropdown');
+    if (dd && !dd.contains(e.target)) document.getElementById('more-menu').classList.add('hidden');
+  });
+</script>
 
 <main id="main-content">
 

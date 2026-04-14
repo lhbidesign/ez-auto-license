@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>California Registration Renewal | EZ Auto License</title>
+<meta name="description" content="Renew your California vehicle registration online in minutes. Official CA DMV authorized partner. No office visit needed."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { "primary": "#001F29", "secondary": "#FFB800" },
+        fontFamily: { "headline": ["Manrope"], "body": ["Inter"] }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+</style>
+</head>
+<body class="bg-white text-[#001F29] antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-amber-400 focus:text-[#001F29] focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold focus:text-sm">Skip to main content</a>
+
+<!-- Top Navigation -->
+<header class="bg-[#001F29] top-0 sticky z-50 shadow-xl shadow-slate-950/20">
+  <nav aria-label="Main navigation" class="flex justify-between items-center w-full px-8 py-4 max-w-full mx-auto">
+    <a href="index.html" class="flex items-center group flex-shrink-0">
+      <img src="https://dl.dropboxusercontent.com/scl/fi/57tvv0slg705nsd5wjflj/Ez-AUto-Logo.png?rlkey=i5kzihz6kg5ulfpfz3v13zam3" alt="EZ Auto License" class="h-12 w-auto object-contain"/>
+    </a>
+    <div class="hidden lg:flex items-center space-x-1 font-['Manrope'] font-semibold tracking-tight text-sm">
+      <a class="bg-amber-400 text-[#001F29] rounded-full px-4 py-1.5 font-bold" href="registration.html" aria-current="page">Registration</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="title-transfer.html">Title Transfer</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="sticker.html">Sticker</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="fleet.html">Fleet</a>
+      <div class="relative" id="more-dropdown">
+        <button onclick="document.getElementById('more-menu').classList.toggle('hidden')" class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full flex items-center gap-1 cursor-pointer">
+          More Services <span class="material-symbols-outlined text-base leading-none" aria-hidden="true">expand_more</span>
+        </button>
+        <div id="more-menu" class="hidden absolute top-full left-0 mt-2 w-64 bg-[#001F29] border border-white/10 rounded-xl shadow-2xl z-50 py-2">
+          <a href="boat-ohv.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 text-slate-300 hover:text-white transition-colors text-sm"><span class="material-symbols-outlined text-amber-400 text-base">sailing</span> Boat &amp; OHV</a>
+          <a href="suspended-registration.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 text-slate-300 hover:text-white transition-colors text-sm"><span class="material-symbols-outlined text-amber-400 text-base">lock_open</span> Clear Suspended Registration</a>
+          <a href="parking-tickets.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 text-slate-300 hover:text-white transition-colors text-sm"><span class="material-symbols-outlined text-amber-400 text-base">receipt_long</span> Parking &amp; Toll Tickets</a>
+          <a href="traffic-school.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 text-slate-300 hover:text-white transition-colors text-sm"><span class="material-symbols-outlined text-amber-400 text-base">local_police</span> Traffic School</a>
+          <a href="flsp.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/5 text-slate-300 hover:text-white transition-colors text-sm"><span class="material-symbols-outlined text-amber-400 text-base">description</span> FLSP Services</a>
+        </div>
+      </div>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="visit-us.html">Visit Us</a>
+      <a class="text-slate-300 hover:text-white px-4 py-1.5 transition-colors rounded-full" href="contact.html">Contact</a>
+    </div>
+    <div class="flex items-center space-x-4">
+      <button class="text-slate-300 hover:text-white transition-colors flex items-center gap-1 text-sm hidden md:flex">
+        <span class="material-symbols-outlined text-lg">language</span> EN/ES
+      </button>
+      <a href="registration.html" class="bg-amber-400 text-[#001F29] px-6 py-2.5 rounded-full font-bold active:scale-90 transition-transform shadow-lg shadow-amber-400/20 text-sm whitespace-nowrap">Quick Renewal</a>
+    </div>
+  </nav>
+</header>
+<script>
+  document.addEventListener('click', function(e) {
+    const dd = document.getElementById('more-dropdown');
+    if (dd && !dd.contains(e.target)) document.getElementById('more-menu').classList.add('hidden');
+  });
+</script>
+
+<main id="main-content">
+
+  <!-- Hero -->
+  <section class="bg-[#001F29] py-20 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+      <div class="max-w-2xl">
+        <span class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-amber-400/20 border border-amber-400/30 text-amber-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+          <span class="material-symbols-outlined text-sm" aria-hidden="true">verified</span>
+          Official CA DMV Partner
+        </span>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-[1.05]">Renew Your California Registration Online</h1>
+        <p class="text-xl text-slate-300 mb-10 leading-relaxed">Skip the DMV line. Renew your California vehicle registration in minutes from your phone or computer. Tags mailed directly to your door.</p>
+      </div>
+
+      <!-- Plate Lookup Form -->
+      <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 max-w-xl shadow-2xl">
+        <h2 class="text-white font-extrabold text-xl mb-2">Look Up Your Vehicle</h2>
+        <p class="text-slate-400 text-sm mb-6">Enter your CA license plate or VIN to get started.</p>
+        <div class="space-y-4">
+          <div class="relative">
+            <label for="plate" class="block text-slate-300 text-xs font-bold uppercase tracking-wider mb-2">License Plate</label>
+            <div class="relative">
+              <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-amber-400" aria-hidden="true">license</span>
+              <input id="plate" type="text" placeholder="e.g. 7ABC123" class="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:ring-2 focus:ring-amber-400 outline-none transition-all"/>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-slate-500 text-xs font-bold uppercase">or</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+          </div>
+          <div class="relative">
+            <label for="vin" class="block text-slate-300 text-xs font-bold uppercase tracking-wider mb-2">VIN Number</label>
+            <div class="relative">
+              <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-amber-400" aria-hidden="true">directions_car</span>
+              <input id="vin" type="text" placeholder="17-character VIN" class="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:ring-2 focus:ring-amber-400 outline-none transition-all"/>
+            </div>
+          </div>
+          <button class="w-full bg-amber-400 text-[#001F29] font-extrabold py-4 rounded-xl hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 text-base mt-2">Calculate My Fees</button>
+        </div>
+        <p class="text-slate-500 text-xs mt-4 text-center">No account needed &middot; 256-bit encrypted &middot; Results in under 2 minutes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-amber-400 py-4">
+    <div class="max-w-7xl mx-auto px-8 flex flex-wrap justify-center md:justify-between items-center gap-4">
+      <div class="flex items-center gap-2 text-[#001F29] font-bold text-sm"><span class="material-symbols-outlined text-lg">verified_user</span> CA DMV Authorized Partner</div>
+      <div class="flex items-center gap-2 text-[#001F29] font-bold text-sm"><span class="material-symbols-outlined text-lg">schedule</span> Processing in Minutes</div>
+      <div class="flex items-center gap-2 text-[#001F29] font-bold text-sm"><span class="material-symbols-outlined text-lg">local_shipping</span> Tags Mailed to Your Door</div>
+      <div class="flex items-center gap-2 text-[#001F29] font-bold text-sm"><span class="material-symbols-outlined text-lg">favorite</span> Family-Owned Since 1984</div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block py-1.5 px-4 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-600 text-[10px] font-bold uppercase tracking-[0.22em] mb-4">Simple Process</span>
+        <h2 class="text-4xl font-extrabold text-[#001F29] tracking-tight">Done in 3 Easy Steps</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="text-center">
+          <div class="w-20 h-20 rounded-full bg-amber-400 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-amber-400/25">
+            <span class="material-symbols-outlined text-[#001F29] text-4xl" style="font-variation-settings:'FILL' 1,'wght' 500;">license</span>
+          </div>
+          <div class="text-amber-500 font-black text-xs uppercase tracking-widest mb-2">Step 1</div>
+          <h3 class="text-xl font-extrabold text-[#001F29] mb-3">Enter Your Plate or VIN</h3>
+          <p class="text-slate-500 leading-relaxed text-sm">Type your California license plate or 17-character VIN. We instantly pull your vehicle record from the state database.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 rounded-full bg-slate-100 border-2 border-slate-200 flex items-center justify-center mx-auto mb-6">
+            <span class="material-symbols-outlined text-slate-400 text-4xl" style="font-variation-settings:'FILL' 1,'wght' 400;">verified_user</span>
+          </div>
+          <div class="text-slate-400 font-black text-xs uppercase tracking-widest mb-2">Step 2</div>
+          <h3 class="text-xl font-extrabold text-[#001F29] mb-3">We Verify with CA DMV</h3>
+          <p class="text-slate-500 leading-relaxed text-sm">Our system runs a live check confirming smog, insurance status, and any outstanding fees automatically.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 rounded-full bg-slate-100 border-2 border-slate-200 flex items-center justify-center mx-auto mb-6">
+            <span class="material-symbols-outlined text-slate-400 text-4xl" style="font-variation-settings:'FILL' 1,'wght' 400;">task_alt</span>
+          </div>
+          <div class="text-slate-400 font-black text-xs uppercase tracking-widest mb-2">Step 3</div>
+          <h3 class="text-xl font-extrabold text-[#001F29] mb-3">Pay and You're Done</h3>
+          <p class="text-slate-500 leading-relaxed text-sm">Securely pay state fees online. Get your e-sticker instantly. Physical tags arrive in 3-5 business days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You'll Need -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="inline-block py-1.5 px-4 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-600 text-[10px] font-bold uppercase tracking-[0.22em] mb-6">Before You Start</span>
+          <h2 class="text-4xl font-extrabold text-[#001F29] mb-6 tracking-tight">What You'll Need</h2>
+          <p class="text-slate-500 leading-relaxed mb-8">Have the following ready to complete your renewal quickly. Most renewals take under 5 minutes.</p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4">
+              <span class="w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="material-symbols-outlined text-[#001F29] text-sm" style="font-variation-settings:'FILL' 1;">check</span></span>
+              <div><p class="font-bold text-[#001F29]">License Plate Number or VIN</p><p class="text-slate-500 text-sm">Found on your registration card or dashboard</p></div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="material-symbols-outlined text-[#001F29] text-sm" style="font-variation-settings:'FILL' 1;">check</span></span>
+              <div><p class="font-bold text-[#001F29]">Valid Smog Certificate</p><p class="text-slate-500 text-sm">Required for most vehicles over 4 years old</p></div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="material-symbols-outlined text-[#001F29] text-sm" style="font-variation-settings:'FILL' 1;">check</span></span>
+              <div><p class="font-bold text-[#001F29]">Proof of CA Auto Insurance</p><p class="text-slate-500 text-sm">Minimum liability coverage required by state law</p></div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="material-symbols-outlined text-[#001F29] text-sm" style="font-variation-settings:'FILL' 1;">check</span></span>
+              <div><p class="font-bold text-[#001F29]">Payment Method</p><p class="text-slate-500 text-sm">Visa, Mastercard, Discover, or bank transfer</p></div>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-[#001F29] rounded-2xl p-10 text-white">
+          <h3 class="text-2xl font-extrabold mb-6">Registration Fees Include</h3>
+          <div class="space-y-4 mb-8">
+            <div class="flex justify-between items-center border-b border-white/10 pb-4">
+              <span class="text-slate-300">Registration Fee</span><span class="font-bold text-amber-400">State Fee</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-white/10 pb-4">
+              <span class="text-slate-300">County/District Fees</span><span class="font-bold text-amber-400">Varies</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-white/10 pb-4">
+              <span class="text-slate-300">Vehicle License Fee</span><span class="font-bold text-amber-400">0.65% of value</span>
+            </div>
+            <div class="flex justify-between items-center pb-2">
+              <span class="text-slate-300">Our Service Fee</span><span class="font-bold text-amber-400">Small flat fee</span>
+            </div>
+          </div>
+          <a href="#plate" class="block text-center bg-amber-400 text-[#001F29] font-extrabold py-4 rounded-xl hover:bg-amber-300 transition-all">Calculate My Exact Fees</a>
+          <p class="text-slate-500 text-xs text-center mt-3">Fees calculated live from CA DMV database</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold text-[#001F29] tracking-tight">Common Questions</h2>
+      </div>
+      <div class="space-y-4">
+        <details class="bg-slate-50 rounded-2xl border border-slate-100 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-[#001F29]">
+            How long does registration renewal take?
+            <span class="material-symbols-outlined text-amber-500 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <p class="px-6 pb-6 text-slate-500 leading-relaxed">Most renewals are completed in under 5 minutes. After payment, you'll receive a digital e-sticker confirmation immediately by email. Physical tags are mailed and arrive within 3-5 business days.</p>
+        </details>
+        <details class="bg-slate-50 rounded-2xl border border-slate-100 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-[#001F29]">
+            Do I need a smog check to renew?
+            <span class="material-symbols-outlined text-amber-500 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <p class="px-6 pb-6 text-slate-500 leading-relaxed">Most vehicles over 4 years old require a smog check every two years. When you enter your plate, we'll instantly tell you if your vehicle needs a smog test before renewal can be completed.</p>
+        </details>
+        <details class="bg-slate-50 rounded-2xl border border-slate-100 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-[#001F29]">
+            Is EZ Auto License an official DMV partner?
+            <span class="material-symbols-outlined text-amber-500 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <p class="px-6 pb-6 text-slate-500 leading-relaxed">Yes. EZ Auto License is a CA DMV authorized Field Licensing Service Provider (FLSP). We are not a branch of the CA DMV, but we are officially licensed to process registrations directly with the state.</p>
+        </details>
+        <details class="bg-slate-50 rounded-2xl border border-slate-100 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-[#001F29]">
+            What if my registration is expired?
+            <span class="material-symbols-outlined text-amber-500 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <p class="px-6 pb-6 text-slate-500 leading-relaxed">We can process expired registrations. Late fees may apply depending on how long the registration has been expired. Enter your plate to see your exact fees including any penalties.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-20 bg-[#001F29]">
+    <div class="max-w-7xl mx-auto px-8 text-center">
+      <h2 class="text-4xl font-extrabold text-white mb-4 tracking-tight">Ready to Renew?</h2>
+      <p class="text-slate-400 text-lg mb-8 max-w-xl mx-auto">Join over 100,000 California drivers who skip the DMV line every year.</p>
+      <a href="#plate" class="inline-block bg-amber-400 text-[#001F29] font-extrabold px-12 py-5 rounded-full text-lg shadow-xl shadow-amber-400/20 hover:bg-amber-300 transition-all">Start My Renewal</a>
+      <p class="text-slate-600 text-sm mt-5">No account needed &middot; Open 24/7 &middot; CA DMV Authorized</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#001F29] border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-12 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div class="md:col-span-1">
+        <a href="index.html" class="flex items-center mb-5 w-fit">
+          <img src="https://dl.dropboxusercontent.com/scl/fi/57tvv0slg705nsd5wjflj/Ez-AUto-Logo.png?rlkey=i5kzihz6kg5ulfpfz3v13zam3" alt="EZ Auto License" class="h-10 w-auto object-contain"/>
+        </a>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">California's trusted DMV-authorized vehicle registration service. Fast, secure, and always available.</p>
+      </div>
+      <div>
+        <h6 class="text-white font-bold text-sm mb-5 uppercase tracking-wider">Services</h6>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li><a href="registration.html" class="hover:text-white transition-colors">Registration Renewal</a></li>
+          <li><a href="title-transfer.html" class="hover:text-white transition-colors">Title Transfers</a></li>
+          <li><a href="sticker.html" class="hover:text-white transition-colors">Duplicate Sticker</a></li>
+          <li><a href="boat-ohv.html" class="hover:text-white transition-colors">Boat &amp; OHV Registration</a></li>
+          <li><a href="fleet.html" class="hover:text-white transition-colors">Fleet Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="text-white font-bold text-sm mb-5 uppercase tracking-wider">More Services</h6>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li><a href="suspended-registration.html" class="hover:text-white transition-colors">Clear Suspended Registration</a></li>
+          <li><a href="parking-tickets.html" class="hover:text-white transition-colors">Parking &amp; Toll Tickets</a></li>
+          <li><a href="traffic-school.html" class="hover:text-white transition-colors">Traffic School</a></li>
+          <li><a href="flsp.html" class="hover:text-white transition-colors">FLSP Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="text-white font-bold text-sm mb-5 uppercase tracking-wider">Company</h6>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li><a href="visit-us.html" class="hover:text-white transition-colors">Visit Our Office</a></li>
+          <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+          <li><a href="tel:7145548093" class="hover:text-white transition-colors">(714) 554-8093</a></li>
+          <li><span class="text-slate-500">100 N Harbor Blvd Ste C5</span></li>
+          <li><span class="text-slate-500">Santa Ana, CA 92703</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-slate-600 text-sm">© 2024 EZ Auto License. All rights reserved. EZ Auto License is not a branch of the CA DMV.</p>
+      <div class="flex gap-6 text-slate-600 text-sm">
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
